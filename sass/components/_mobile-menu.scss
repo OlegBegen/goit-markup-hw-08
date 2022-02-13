@@ -1,0 +1,132 @@
+.mobile-menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9;
+  background-color: var(--primary-white-color);
+  transform: translateY(-100%);
+  transition: transform 250ms var(--cubic), opacity 250ms var(--cubic),
+    visibility 250ms var(--cubic);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  overflow-y: scroll;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-menu-container.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: unset;
+  transform: translateY(0);
+}
+.menu-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  @media screen and (min-width: 386px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.mobile-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.menu-references {
+  flex-grow: 1;
+}
+
+.menu-references__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.menu-references__link {
+  color: var(--header-text-color);
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  transition: color var(--transition-function);
+
+  &:hover,
+  &:focus {
+    color: var(--hover-text-color);
+  }
+}
+
+.menu-references__link--current {
+  color: var(--hover-text-color);
+}
+
+.menu-contacts {
+  margin-bottom: 64px;
+}
+
+.menu-contacts__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.menu-contacts__phone {
+  color: var(--hover-text-color);
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+}
+
+.menu-contacts__e-mail {
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+
+  &:hover,
+  &:focus {
+    color: var(--hover-text-color);
+  }
+}
+
+.menu-socials {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: -10px;
+}
+
+.menu-socials__item {
+  margin-top: 10px;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+}
+
+.menu-socials__item:nth-last-child(2) {
+  @media screen and (max-width: 439px) {
+    border-right: none;
+  }
+}
+
+.menu-socials__link {
+  color: var(--hover-text-color);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+}

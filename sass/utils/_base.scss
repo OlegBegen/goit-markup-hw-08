@@ -1,5 +1,7 @@
 .list {
   list-style: none;
+  padding: 0;
+  margin: auto;
 }
 a {
   text-decoration: none;
@@ -32,9 +34,21 @@ body {
 
 .container {
   margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
   padding-right: 15px;
   padding-left: 15px;
-  width: 1200px;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and(min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and(min-width: 1200px) {
+    width: 1200px;
+  }
 }
 
 .section {
