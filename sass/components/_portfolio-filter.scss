@@ -1,23 +1,8 @@
 .page-portfolio__filter {
   display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  margin-top: -16px;
-  margin-bottom: 40px;
-  padding-top: 60px;
-  margin-right: 103px;
-  padding-left: 0;
-  // margin-right: 8px;
-
-  @media screen and (min-width: 768px) {
-    justify-content: center;
-    margin-right: 79px;
-    margin-left: 79px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    margin-bottom: 50px;
-  }
+  padding-top: 94px;
+  padding-left: 295px;
+  margin-right: 8px;
 }
 .page-portfolio__button {
   background-color: var(--background-portf-button);
@@ -25,7 +10,6 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
-  margin-bottom: 15px;
   padding: 6px 22px;
   border-radius: 4px;
   text-align: center;

@@ -1,7 +1,7 @@
 .list {
   list-style: none;
   padding: 0;
-  margin: auto;
+  margin: 0;
 }
 a {
   text-decoration: none;
@@ -33,25 +33,14 @@ body {
 }
 
 .container {
+  width: 1200px;
   margin: 0 auto;
-  margin-right: auto;
-  margin-left: auto;
   padding-right: 15px;
   padding-left: 15px;
-
-  @media screen and (min-width: 480px) {
-    width: 480px;
-  }
-
-  @media screen and(min-width: 768px) {
-    width: 768px;
-  }
-  @media screen and(min-width: 1200px) {
-    width: 1200px;
-  }
 }
 
 .section {
   max-width: 1600px;
   margin: 0 auto;
+  margin-top: 94px;
 }
