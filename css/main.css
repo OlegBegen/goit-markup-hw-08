@@ -296,18 +296,54 @@ body {
   background-color: #188ce8;
 }
 
-.grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-left: 0;
+@media screen and (max-width: 1199px) {
+  .advantages {
+    margin-top: 60px;
+    margin-bottom: 90px;
+  }
 }
 
-.grid__item:not(:last-child) {
-  margin-right: 30px;
+.grid {
+  margin-bottom: -30px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: -30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: -30px;
+  }
+}
+
+.grid__item {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .grid__item {
+    margin-right: 30px;
+    width: calc(100% / 2 - 30px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .grid__item {
+    margin-right: 30px;
+    width: 270px;
+  }
 }
 
 .grid__title {
@@ -315,6 +351,7 @@ body {
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
+  text-align: center;
   text-transform: uppercase;
   margin-top: 30px;
   margin-bottom: 10px;
@@ -329,7 +366,7 @@ body {
 }
 
 .grid__icon {
-  width: 270px;
+  width: 100%;
   height: 120px;
   background-color: var(--background-portf-button);
   display: block;
@@ -345,7 +382,16 @@ body {
           align-items: center;
 }
 
-/* _____________________________________________________________________ */
+.work {
+  margin-bottom: 94px;
+}
+
+@media screen and (max-width: 1200px) {
+  .work {
+    display: none;
+  }
+}
+
 .work__title {
   color: var(--color-general-);
   font-weight: bold;
@@ -390,7 +436,8 @@ body {
 
 .comand {
   background-color: var(--background-portf-button);
-  padding-bottom: 94px;
+  margin-top: 0;
+  padding-bottom: 60px;
 }
 
 .comand__title {
@@ -398,23 +445,55 @@ body {
   font-weight: bold;
   font-size: 36px;
   line-height: 1.17;
-  padding-top: 94px;
-  padding-bottom: 50px;
+  padding-top: 60px;
+  padding-bottom: 30px;
   text-align: center;
   margin: 0;
 }
 
 .comand__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  margin-bottom: -30px;
 }
 
-.comand__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .comand__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: -30px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .comand__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .comand__list {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.comand__item {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .comand__item {
+    margin-right: 30px;
+    width: calc(100% / 2 - 30px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .comand__item {
+    margin-right: 30px;
+  }
 }
 
 .person {
@@ -688,7 +767,6 @@ body {
   }
 }
 
-/* project-general --->page-portfolio__card  */
 .project {
   background-color: var(--background-heder-);
   border: 1px solid #eeeeee;
