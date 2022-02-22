@@ -6,7 +6,6 @@
   font-weight: bold;
   font-size: 36px;
   line-height: 1.17;
-  // padding-top: 94px;
   padding-bottom: 50px;
   text-align: center;
   margin: 0;
@@ -24,8 +23,6 @@
   @media screen and(min-width:1200px) {
     justify-content: space-between;
   }
-
-  // justify-content: space-between;
 }
 .clients__item {
   @media screen and (max-width: 1199px) {

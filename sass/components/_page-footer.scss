@@ -6,22 +6,59 @@
 
 .footer {
   display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
   padding-top: 60px;
   padding-bottom: 60px;
+
+  @media screen and (min-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  @media screen and (max-width: 1199) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: space-between;
+  }
 }
 
 .page-footer__contact {
-  margin-right: 70px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 60px;
+
+  @media screen and(max-width:1199) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+
+  @media screen and (min-width: 1200px) {
+    align-items: flex-start;
+  }
 }
 
 .page-footer__adress {
+  margin-bottom: 8px;
   color: var(--color-h1-);
   font-weight: normal;
-  font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   padding-left: 0;
-  padding-top: 20px;
 }
 
 .footer-contact__list {
@@ -39,10 +76,16 @@
 }
 
 .page-footer__sotial {
-  margin-right: 93px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  margin-bottom: 60px;
+  color: var(--color-h1-);
 }
 
 .page-footer_title {
+  margin-top: 0;
   margin-bottom: 20px;
   font-size: 14px;
   line-height: 1.14;
@@ -70,7 +113,14 @@
     background-color: var(--background-button-);
   }
 }
-
+.page-footer__email {
+  @media screen and(max-width:1199px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+  }
+}
 .page-footer__email input {
   width: 358px;
   height: 50px;
@@ -78,11 +128,17 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
   border-radius: 4px;
-  margin-right: 12px;
+
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 16px;
   color: rgba(255, 255, 255, 0.6);
+  @media screen and(max-width:1199px) {
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 12px;
+  }
 }
 
 .page-footer__email button {
