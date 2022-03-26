@@ -105,7 +105,7 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .page-header__navigation {
+  .mob-menu__close {
     display: none;
   }
 }
@@ -121,7 +121,6 @@ body {
 }
 
 .site-nav__link {
-  position: relative;
   color: var(--color-general-);
   font-weight: 500;
   font-size: 14px;
@@ -297,6 +296,113 @@ body {
 
 .logo--footer {
   color: var(--background-heder-);
+}
+
+.header {
+  position: relative;
+}
+
+.mobile-menu-button {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu-button {
+    display: none;
+  }
+}
+
+.mobile-menu-button .mob-icon-cross {
+  display: none;
+}
+
+.mobile-menu-button.is-open .mob-icon-cross {
+  display: block;
+}
+
+.mobile-menu-button.is-open .mob-icon-menu {
+  display: none;
+}
+
+.menu-container.is-open .page-header__logo {
+  display: none;
+}
+
+.menu-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 796px;
+  border: 1px solid tomato;
+  background-color: #ffffff;
+  text-align: start;
+}
+
+.menu-container.is-open {
+  display: block;
+}
+
+.site-nav__mob {
+  margin-bottom: 48px;
+  margin-left: 40px;
+  margin-bottom: 302px;
+  color: #212121;
+}
+
+.mob-site__link {
+  font-size: 40px;
+  line-height: 1.18;
+  margin-bottom: 32px;
+}
+
+.mob__active {
+  color: #2196f3;
+}
+
+.site-nav-mob__link {
+  color: #212121;
+}
+
+.header-contact__mob {
+  margin-bottom: 64px;
+  margin-left: 40px;
+  font-size: 24px;
+  line-height: 1.17;
+  color: #757575;
+}
+
+.mob-menu__social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 40px;
+  width: 357px;
+}
+
+.mob-menu__social-item {
+  margin: 10px 0 0 10px;
+  padding-right: 10px;
+}
+
+.mob-menu__social-item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mob-menu__social-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: #2196f3;
 }
 
 .heroe {
